@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "herbalchatrag"
+name = "HerbalChatRAG"
 version = "0.1.0"
 description = "Herbal Remedies Chat"
 authors = ["Nour El Imane S. <nourelimanesahali@gmail.com>"]
