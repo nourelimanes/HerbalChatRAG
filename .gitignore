@@ -1,5 +1,6 @@
 .streamlit/secrets.toml
 venv
+db/chroma_db_apple
 0_loade_webdata.py
 1_loade_documents.py
 2_chat_history.py
