@@ -1,0 +1,69 @@
+<<<<<<< HEAD
+[tool.poetry]
+name = "herbalchatrag"
+version = "0.1.0"
+description = "Herbal Remedies Chat"
+authors = ["nourelimans <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.10.0,<3.12"
+python-dotenv = "^1.0.1"
+langchain = "^0.3.0"
+langchain-community = "^0.3.0"
+langchain-anthropic = "^0.2.0"
+langchain-google-genai = "^2.0.0"
+langchain-google-firestore = "^0.3.0"
+firestore = "^0.0.8"
+chromadb = "^0.5.0"
+tiktoken = "^0.7.0"
+sentence-transformers = "^3.0.0"
+bs4 = "^0.0.2"
+firecrawl-py = "^0.0.13"
+langchainhub = "^0.1.18"
+wikipedia = "^1.4.0"
+tavily-python = "^0.3.3"
+groq = "^0.11.0"
+streamlit = "^1.38.0"
+pypdf = "^4.3.1"
+tqdm ="^4.66.5"
+pymongo = "^4.8"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+=======
+[tool.poetry]
+name = "herbalchatrag"
+version = "0.1.0"
+description = "Herbal Remedies Chat"
+authors = ["nourelimans <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.10.0,<3.12"
+python-dotenv = "^1.0.1"
+langchain = "^0.3.0"
+langchain-community = "^0.3.0"
+langchain-anthropic = "^0.2.0"
+langchain-google-genai = "^2.0.0"
+langchain-google-firestore = "^0.3.0"
+firestore = "^0.0.8"
+chromadb = "^0.5.0"
+tiktoken = "^0.7.0"
+sentence-transformers = "^3.0.0"
+bs4 = "^0.0.2"
+firecrawl-py = "^0.0.13"
+langchainhub = "^0.1.18"
+wikipedia = "^1.4.0"
+tavily-python = "^0.3.3"
+groq = "^0.11.0"
+streamlit = "^1.38.0"
+pypdf = "^4.3.1"
+tqdm ="^4.66.5"
+pymongo = "^4.8"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+>>>>>>> ebdef12 (Initial commit)
