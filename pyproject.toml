@@ -2,7 +2,7 @@
 name = "herbalchatrag"
 version = "0.1.0"
 description = "Herbal Remedies Chat"
-authors = ["nourelimans <you@example.com>"]
+authors = ["Nour El Imane S. <nourelimans@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = ">=3.10.0,<3.13"
