@@ -1,6 +1,5 @@
 .streamlit/secrets.toml
 venv
-db
 0_loade_webdata.py
 1_loade_documents.py
 2_chat_history.py

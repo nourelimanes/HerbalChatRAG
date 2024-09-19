@@ -12,14 +12,6 @@
 - **Advanced Data Handling**: Processes and stores data efficiently using Chroma for vector storage.
 - **Deployable Application**: Utilizes Streamlit for the user interface and Azure for deployment.
 
-## Technologies Used
-
-- **LangChain**: For document processing and vector storage.
-- **Groq**: For generating chat responses and managing AI behavior.
-- **Streamlit**: For creating the user interface and chatbot interaction.
-- **Azure**: For deploying the application.
-- **Python Libraries**: Includes `tqdm`, `dotenv`, `langchain_community`, `HuggingFaceEmbeddings`, `Chroma`, and `Groq`.
-
 ## Setup and Installation
 
 ### Prerequisites
