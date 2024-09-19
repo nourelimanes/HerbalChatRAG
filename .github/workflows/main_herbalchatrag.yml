@@ -1,7 +1,3 @@
-# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
-# More GitHub Actions for Azure: https://github.com/Azure/actions
-# More info on Python, GitHub Actions, and Azure App Service: https://aka.ms/python-webapps-actions
-
 name: Build and deploy Python app to Azure Web App - HerbalChatRAG
 
 on:
@@ -13,37 +9,42 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
 
+      # Set up Python version
       - name: Set up Python version
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
 
-      - name: Create and start virtual environment
+      # Install Poetry
+      - name: Install Poetry
         run: |
-          python -m venv venv
-          source venv/bin/activate
-      
-      - name: Install dependencies
-        run: |
-          source venv/bin/activate
-          pip install -e . 
-        
-      # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
+          curl -sSL https://install.python-poetry.org | python3 -
+          echo "Poetry installed"
 
+      # Install dependencies using Poetry
+      - name: Install dependencies with Poetry
+        run: |
+          poetry install --no-dev  # Use --no-dev if you want to skip development dependencies
+
+      # Optional: Run tests here
+      # - name: Run Tests
+      #   run: |
+      #     poetry run pytest
+
+      # Zip the artifact for deployment
       - name: Zip artifact for deployment
-        run: zip release.zip ./* -r
+        run: |
+          zip -r release.zip . -x "venv/*" "venv" "venv/.env"
 
+      # Upload the artifact to be deployed
       - name: Upload artifact for deployment jobs
         uses: actions/upload-artifact@v4
         with:
           name: python-app
-          path: |
-            release.zip
-            !venv/
+          path: release.zip
 
   deploy:
     runs-on: ubuntu-latest
@@ -52,18 +53,19 @@ jobs:
       name: 'Production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
     permissions:
-      id-token: write #This is required for requesting the JWT
-
+      id-token: write  # This is required for requesting the JWT
     steps:
+      # Download the artifact
       - name: Download artifact from build job
         uses: actions/download-artifact@v4
         with:
           name: python-app
 
+      # Unzip the artifact
       - name: Unzip artifact for deployment
         run: unzip release.zip
 
-      
+      # Login to Azure
       - name: Login to Azure
         uses: azure/login@v2
         with:
@@ -71,10 +73,10 @@ jobs:
           tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_BCFD3B9D850B4A32A0E3004601BBE88D }}
           subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_E626940DE6A6413CBFB0BB6E0CAD54A9 }}
 
+      # Deploy to Azure Web App
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
         id: deploy-to-webapp
         with:
           app-name: 'HerbalChatRAG'
           slot-name: 'Production'
-          
