@@ -38,3 +38,9 @@
 
     ```bash
     poetry run streamlit run streamlit_app.py
+## Demo
+
+Check out the video demonstration of the Herbal Remedies Finder application:
+
+
+[![Watch Video](https://img.youtube.com/vi/VIDEO_ID/0.jpg)](https://www.loom.com/embed/b12839eeaf624967be65ad5ab06324c9?sid=2f802694-72a8-44bf-9875-8d3bee4d9933)
