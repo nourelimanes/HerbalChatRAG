@@ -2,7 +2,7 @@
 
 ## Overview
 
-**Herbal Remedies Finder** is a chatbot application designed to help users find information about herbal remedies. The app leverages a Retrieval-Augmented Generation (RAG) approach, integrating data from external sources such as books and web APIs to provide accurate and relevant responses. Built using LangChain, Groq, Streamlit, and deployed on Azure, this application offers a seamless and interactive experience for users seeking information on herbal remedies.
+**Herbal Remedies Finder** is a chatbot application designed to help users find information about herbal remedies. The app leverages a Retrieval-Augmented Generation (RAG) approach, integrating data from external sources such as books and web APIs to provide accurate and relevant responses. Built using LangChain, Groq, and Streamlit, this application offers a seamless and interactive experience for users seeking information on herbal remedies.
 
 ## Features
 
@@ -10,7 +10,6 @@
 - **Data Integration**: Incorporates information from 15 books and a web API.
 - **Guided AI Behavior**: Designed to minimize hallucinations and provide accurate responses.
 - **Advanced Data Handling**: Processes and stores data efficiently using Chroma for vector storage.
-- **Deployable Application**: Utilizes Streamlit for the user interface and Azure for deployment.
 
 ## Setup and Installation
 
